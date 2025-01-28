@@ -1,0 +1,28 @@
+header {
+  background-color: var(--secondary-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--text-muted);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
