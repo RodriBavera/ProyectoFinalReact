@@ -56,12 +56,36 @@
     font-size: 1rem;
     transition: all 0.3s ease;
     text-align: center;
+    margin-top: 10px;
+    margin-inline: 5px;
   }
   
   .item-detail-card .btn:hover {
     background-color: #0056b3; /* Azul más oscuro en hover */
     color: #fff;
     transform: scale(1.05); /* Pequeño efecto de zoom */
+  }
+
+  .item-detail-card .btn-terminar {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #28a745; /* Azul del botón */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+    margin-inline: 5px;
+  }
+
+  .item-detail-card .btn-terminar:hover {
+    background-color: #218838; /* Azul más oscuro en hover */
+    color: #fff;
+    transform: scale(1.05);
   }
   
   

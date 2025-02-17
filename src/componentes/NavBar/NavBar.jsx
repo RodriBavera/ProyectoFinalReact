@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <header>
         <Link to="/">
-        <h1>Tienda NetoTech Store</h1>
+        <h1>Tienda NeoTech Store</h1>
         </Link>
         <nav>
   <ul>
