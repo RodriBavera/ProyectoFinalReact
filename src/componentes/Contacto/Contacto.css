@@ -1,0 +1,119 @@
+.contacto-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .contacto-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .contacto-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contacto-form label {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .contacto-form input,
+  .contacto-form textarea {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+  }
+  
+  .contacto-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .contacto-form button {
+    padding: 10px;
+    background-color: #ffcc00;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .contacto-form button:hover {
+    background-color: #e6b800;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .exito {
+    color: lightgreen;
+    font-weight: bold;
+  }
+  
+  .contacto-info {
+    margin-top: 20px;
+  }
+  
+  .contacto-info p {
+    margin-bottom: 5px;
+  }
+  
+  .redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .redes a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .redes a:hover {
+    color: white;
+  }
+  
+  /* 📱 Responsive (móviles y tablets) */
+  @media (max-width: 600px) {
+    .contacto-container {
+      width: 90%;
+    }
+  
+    .contacto-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contacto-form input,
+    .contacto-form textarea {
+      font-size: 0.9rem;
+    }
+  
+    .contacto-form button {
+      font-size: 1rem;
+    }
+  }

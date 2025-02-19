@@ -38,15 +38,26 @@ export const CarritoProvider = ({ children }) => {
     }
 
     const eliminarProducto = (id) => {
-        const productoEliminado = carrito.find(prev => prev.item.id === id);
+        const productoEliminado = carrito.find(prod => prod.item.id === id);
 
-        const carritoActualizado = carrito.filter(prod => prod.id !== id);
-        setCarrito(carritoActualizado);
+        if (!productoEliminado) return;
 
-        setCantidadTotal(prev => prev - productoEliminado.cantidad);
-        setTotal(prev => prev - (productoEliminado.item.precio * productoEliminado.cantidad));
+        if (productoEliminado.cantidad > 1) {
 
-    }
+            const carritoActualizado = carrito.map(prod =>
+                prod.item.id === id ? { ...prod, cantidad: prod.cantidad - 1 } : prod
+            );
+            setCarrito(carritoActualizado);
+        } else {
+
+            const carritoActualizado = carrito.filter(prod => prod.item.id !== id);
+            setCarrito(carritoActualizado);
+        }
+
+        setCantidadTotal(prev => Math.max(0, prev - 1));
+        setTotal(prev => Math.max(0, prev - productoEliminado.item.precio));
+    };
+
 
     const vaciarCarrito = () => {
         setCarrito([]);

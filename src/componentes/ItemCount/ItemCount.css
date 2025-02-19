@@ -1,20 +1,21 @@
 .item-count-container {
     display: flex;
-    align-items: center; /* Centra verticalmente */
+    align-items: center; 
     justify-content: center;
-    gap: 10px; /* Espacio entre los elementos */
+    gap: 10px; 
 }
 
 .contador {
-    min-width: 30px; /* Asegura un ancho mínimo para evitar saltos */
-    text-align: center; /* Centra el texto dentro del elemento */
-    font-size: 18px; /* Ajusta el tamaño según prefieras */
+    min-width: 30px; 
+    text-align: center; 
+    font-size: 18px; 
     font-weight: bold;
     margin-top: 13px;
 }
 
 .btn-count {
-    background-color: #007bff; /* Azul tecnológico */
+    width: 50px;
+    background-color: #007bff; 
     color: white;
     border: none;
     padding: 8px 12px;
@@ -25,11 +26,11 @@
 }
 
 .btn-count:hover {
-    background-color: #0056b3; /* Un azul más oscuro al pasar el mouse */
+    background-color: #0056b3; 
 }
 
 .btn-agregar {
-    background-color: #28a745; /* Verde llamativo */
+    background-color: #28a745; 
     color: white;
     border: none;
     padding: 10px 15px;

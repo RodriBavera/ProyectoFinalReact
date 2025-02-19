@@ -1,6 +1,5 @@
 import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
-//import { getProductos, getProductoPorCategoria } from "../../asyncmock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, where, query } from "firebase/firestore";
@@ -9,7 +8,6 @@ import { db } from "../../services/config";
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const { categoria } = useParams();
-  
 
   useEffect(() => {
     console.log("Categoría seleccionada:", categoria);
@@ -35,15 +33,18 @@ const ItemListContainer = () => {
   
     obtenerProductos();
   }, [categoria]);
-  
 
   return (
-    <div>
-      <h2>Mis Productos</h2>
-      <ItemList productos={productos} />
+    <div className="container">
+      <div className="title-section">
+        <h2>{categoria ? `Productos - ${categoria}` : 'Todos los Productos'}</h2>
+      </div>
+      
+      <div className="productos-container">
+        <ItemList productos={productos} />
+      </div>
     </div>
   );
 };
-
 
 export default ItemListContainer;

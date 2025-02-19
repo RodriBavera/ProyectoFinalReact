@@ -1,5 +1,6 @@
 .cardPruducto {
-    background-color: var(--card-bg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
     color: var(--text-color);
     padding: 1rem;
     border-radius: 0.5rem;
@@ -9,38 +10,38 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 200px; /* Ajuste del tamaño */
-    margin: auto; /* Centra la tarjeta */
+    max-width: 200px;
+    margin: auto; 
   }
   
   .cardPruducto:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05); 
     box-shadow: 0 6px 10px var(--card-shadow);
   }
   
   .cardPruducto img {
-    width: 150px; /* Tamaño reducido de las imágenes */
-    height: 150px; /* Mantener proporción cuadrada */
-    object-fit: cover; /* Recorta las imágenes para que se vean consistentes */
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
   }
   
   .cardPruducto h3 {
-    font-size: 1rem; /* Tamaño reducido del texto */
+    font-size: 1rem; 
     font-weight: 600;
     margin: 0.5rem 0;
   }
   
   .cardPruducto p {
-    font-size: 0.875rem; /* Texto más pequeño */
+    font-size: 0.875rem; 
     margin: 0.25rem 0;
   }
   
   .cardPruducto .btn {
     background-color: var(--btn-bg);
     color: var(--btn-text);
-    padding: 0.3rem 0.5rem; /* Botón más pequeño */
+    padding: 0.3rem 0.5rem; 
     font-size: 0.875rem;
     border: none;
     border-radius: 0.3rem;

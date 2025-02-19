@@ -10,8 +10,16 @@
     --btn-hover: #536dfe;
     --btn-text: #ffffff;
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
   
   body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden; 
     background-color: var(--primary-bg);
     color: var(--text-color);
     font-family: 'Arial', sans-serif;
