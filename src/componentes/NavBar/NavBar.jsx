@@ -12,9 +12,12 @@ const NavBar = () => {
 
   return (
     <header className="navbar">
+      <div className="logo-container">
+      <img src="/src/assets/iconNeoTech.jpg" alt="NeoTech Store Logo" className="logo" />
       <Link to="/" className="store-name">
         <h1>Tienda NeoTech Store</h1>
       </Link>
+      </div>
       <nav>
         <ul className="nav-links">
           <li>
