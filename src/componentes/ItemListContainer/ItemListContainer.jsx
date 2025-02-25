@@ -37,7 +37,7 @@ const ItemListContainer = () => {
   return (
     <div className="container">
       <div className="title-section">
-        <h2>{categoria ? `Productos - ${categoria}` : 'Todos los Productos'}</h2>
+        <h2>{categoria ? `Productos - ${categoria}` : 'Todos nuestros Productos'}</h2>
       </div>
       
       <div className="productos-container">

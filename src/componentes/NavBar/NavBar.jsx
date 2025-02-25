@@ -2,6 +2,7 @@ import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import logo from "../../assets/iconNeoTech.jpg";
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -13,15 +14,18 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <div className="logo-container">
-      <img src="/src/assets/iconNeoTech.jpg" alt="NeoTech Store Logo" className="logo" />
-      <Link to="/" className="store-name">
-        <h1>Tienda NeoTech Store</h1>
-      </Link>
+        <img src={logo} alt="NeoTech Store Logo" className="logo" />
+        <Link to="/" className="store-name">
+          <h1>NeoTech Store</h1>
+        </Link>
       </div>
       <nav>
         <ul className="nav-links">
           <li>
             <NavLink to="/" className="home-link">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/tienda" className="shop-link">Tienda</NavLink>
           </li>
           <li onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
             <span className="dropdown-toggle">Categorías</span>

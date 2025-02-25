@@ -1,11 +1,18 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useContext } from "react";
 
+// Creamos el contexto
 export const CarritoContext = createContext({
     carrito: [],
     total: 0,
     cantidadTotal: 0
-})
+});
 
+// Hook personalizado para acceder al contexto
+export const useCarrito = () => {
+    return useContext(CarritoContext);
+};
+
+// Proveedor del contexto
 export const CarritoProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
     const [total, setTotal] = useState(0);
@@ -34,7 +41,6 @@ export const CarritoProvider = ({ children }) => {
             setCantidadTotal(prev => prev + cantidad);
             setTotal(prev => prev + (item.precio * cantidad));
         }
-
     }
 
     const eliminarProducto = (id) => {
@@ -43,13 +49,11 @@ export const CarritoProvider = ({ children }) => {
         if (!productoEliminado) return;
 
         if (productoEliminado.cantidad > 1) {
-
             const carritoActualizado = carrito.map(prod =>
                 prod.item.id === id ? { ...prod, cantidad: prod.cantidad - 1 } : prod
             );
             setCarrito(carritoActualizado);
         } else {
-
             const carritoActualizado = carrito.filter(prod => prod.item.id !== id);
             setCarrito(carritoActualizado);
         }
@@ -58,19 +62,15 @@ export const CarritoProvider = ({ children }) => {
         setTotal(prev => Math.max(0, prev - productoEliminado.item.precio));
     };
 
-
     const vaciarCarrito = () => {
         setCarrito([]);
         setTotal(0);
         setCantidadTotal(0);
-
     }
 
     return (
         <CarritoContext.Provider value={{ carrito, total, cantidadTotal, agregarAlCarrito, eliminarProducto, vaciarCarrito }}>
             {children}
         </CarritoContext.Provider>
-    )
-
-
-}
+    );
+};
