@@ -49,7 +49,7 @@ const Footer = () => {
 
                 <div className="footer-contact">
                     <h3>Contacto</h3>
-                    <p>📍 Dirección: Av. Tecnología 123, Ciudad</p>
+                    <p>📍 Dirección: Velez Sarfield 1756, Santa Rosa, La PAmpa</p>
                     <p>📞 Teléfono: +54 9 123 456 789</p>
                     <p>📧 Email: contacto@neotech.com</p>
                 </div>
