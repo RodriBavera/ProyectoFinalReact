@@ -150,20 +150,20 @@ h1:hover {
   .nav-container {
     position: fixed;
     top: 0;
-    right: -100%; /* Cambiado de left a right */
-    width: auto; /* Cambiado de 80% a auto para que ocupe solo el espacio necesario */
-    min-width: 200px; /* Un ancho mínimo para el menú */
+    right: -100%; 
+    width: auto; 
+    min-width: 200px; 
     max-width: 300px;
     height: 100vh;
     background-color: #1a1a1a;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); /* Cambiado para sombra a la izquierda */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); 
     padding: 4rem 1rem 1rem;
     z-index: 900;
     overflow-y: auto;
   }
 
   .nav-container.active {
-    right: 0; /* Cambiado de left a right */
+    right: 0; 
   }
 
   .nav-links {

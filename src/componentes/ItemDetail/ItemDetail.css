@@ -1,91 +1,65 @@
+.detail-page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.detalleProducto {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #00bfff;
+  text-transform: uppercase;
+}
+
 .item-detail-container {
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    padding: 2rem;
-    min-height: 100vh; /* Altura mínima de la pantalla */
-    background-color: var(--bg-color); /* Fondo del contenedor */
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.item-detail-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+}
+
+img {
+  margin: auto;
+}
+
+.btn-terminar {
+  width: 60%;
+  background-color: #f40707d2;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .detail-page-container {
+    padding: 10px;
   }
-  
-  .item-detail-container h2 {
-    font-size: 2rem; /* Tamaño del título */
-    color: var(--text-color);
-    margin-bottom: 1.5rem; /* Espacio entre el título y la tarjeta */
+
+  .detalleProducto {
+    font-size: 24px;
+    margin-bottom: 15px;
   }
-  
+
   .item-detail-card {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px var(--card-shadow);
-    text-align: center;
-    max-width: 400px; /* Ancho máximo de la tarjeta */
-    width: 100%; /* Ajusta el ancho al contenedor */
+    padding: 15px;
   }
-  
-  .item-detail-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .item-detail-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .item-detail-card p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-  
-  .item-detail-card .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #007bff; /* Azul del botón */
-    color: #fff; /* Texto blanco */
-    border: none;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    text-align: center;
-    margin-top: 10px;
-    margin-inline: 5px;
-  }
-  
-  .item-detail-card .btn:hover {
-    background-color: #0056b3; /* Azul más oscuro en hover */
-    color: #fff;
-    transform: scale(1.05); /* Pequeño efecto de zoom */
-  }
-
-  .item-detail-card .btn-terminar {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #28a745; /* Azul del botón */
-    color: #fff; /* Texto blanco */
-    border: none;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    text-align: center;
-    margin-top: 10px;
-    margin-inline: 5px;
-  }
-
-  .item-detail-card .btn-terminar:hover {
-    background-color: #218838; /* Azul más oscuro en hover */
-    color: #fff;
-    transform: scale(1.05);
-  }
-  
-  
+}
